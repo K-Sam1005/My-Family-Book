@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>My Family Book</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <script>
+            var images = ["family.gif","Grandpa.jpg","Grandma.jpg","dad.jpeg","mom.jpeg","roobee.jpg","me.jpg",];
+            var names = ["","Murari Khobragade (My Grandpa)","Hirabai Khobragade (My Grandma)", "Firoj Khobragade (My Father)", "Sujata Khobragade (My Mother)", "Roobee Khobragade (My Sister)", "Sam (Me)"];
+            var i = 0;
+            function update(){
+                i++;
+                var number_of_pics = 7
+                if (i >= number_of_pics){
+                    i=0;
+                }
+                var updated_images = images[i];
+                var updated_names = names[i];
+                document.getElementById("names").innerHTML = updated_names;
+                document.getElementById("img").src = updated_images;
+            }
+        </script>
+        <div id="container">
+            <h1>My Family Book</h1>
+            <img src="family.gif" id="img">
+            <p id="names"></p>
+            <button id="btn" onclick="update()"><span>Next</span></button>
+        </div>
+    </body>
+</html>
